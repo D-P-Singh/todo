@@ -3,6 +3,7 @@ const router = require("./routes/user")
 const dbConnect = require("./config/database")
 const todoRouter = require("./routes/todo")
 const cokkieParser = require("cookie-parser")
+const adminRouter = require("./routes/admin")
 const cors = require("cors")
 require("dotenv").config()
 const app = express()
@@ -13,6 +14,7 @@ app.use(cors({
 }))
 app.use(express.json())
 app.use(cokkieParser())
+app.use("/api", adminRouter);
 app.use("/api", router)
 app.use("/api", todoRouter)
 
