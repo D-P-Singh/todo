@@ -8,7 +8,7 @@ const cors = require("cors")
 require("dotenv").config()
 const app = express()
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://todotaska.netlify.app",
     methods: ["POST", "PUT", "DELETE", "GET"],
   //  headers: ['Content-Type', 'Authrization']
 }))
